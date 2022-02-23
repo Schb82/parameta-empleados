@@ -19,6 +19,10 @@ public class BirthdateValidator  implements ConstraintValidator<birthdateConstra
         
         String value = valueToValidate.toString();
 
+        if(Calendar.getInstance().get(Calendar.YEAR) - dateInCalendar.get(Calendar.YEAR) <= 18){
+               throw  new IllegalArgumentException("Edad no permitida, debe ser mayor de edad");
+
+        }
             return valueToValidate.toString() != null //&& valueToValidate.toString().matches("^([0-2][0-9]|3[0-1])(\\/|-)(0[1-9]|1[0-2])\\2(\\d{4})$")
                     && Calendar.getInstance().get(Calendar.YEAR) - dateInCalendar.get(Calendar.YEAR) >= 18;
 

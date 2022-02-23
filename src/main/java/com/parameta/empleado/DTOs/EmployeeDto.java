@@ -49,7 +49,9 @@ public class EmployeeDto {
     @JsonFormat(pattern = "dd/MM/yyyy")
     private Date startdate;
 
+    private String jobLifetime;
 
+    private String age;
 
 
 }
