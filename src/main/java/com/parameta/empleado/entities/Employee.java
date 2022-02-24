@@ -42,6 +42,6 @@ public class Employee {
     private Date birthdate;
 
     @Column(name = "startdate")
-    private Date startDate;
+    private Date startdate;
 
 }

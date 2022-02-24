@@ -41,13 +41,14 @@ public class EmployeeDto {
   /*  @NotNull(message="El Fecha de nacimiento es obligatorio")*/
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @JsonFormat(pattern = "dd/MM/yyyy")
-    @birthdateConstraint(message = "El empleado debe ser mayor de edad")
+   @birthdateConstraint(message = "El empleado debe ser mayor de edad")
+   // @birthdateConstraint
     private Date birthdate;
 
-    @NotNull(message="El Fecha de Vinculación con la compania es obligatorio")
+    @NotNull(message="La Fecha de Vinculación con la compañia es obligatorio")
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @JsonFormat(pattern = "dd/MM/yyyy")
-    private Date startdate;
+    private Date startDate;
 
     private String jobLifetime;
 
