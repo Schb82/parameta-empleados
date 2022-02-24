@@ -48,10 +48,10 @@ public class EmployeeService {
         emp.setJobTitle(input.getJobtitle());
         emp.setSalary(input.getSalary());
         emp.setBirthdate(input.getBirthdate());
-        emp.setStartDate(input.getStartdate());
+        emp.setStartdate(input.getStartDate());
 
         repository.save(emp);
-        input.setJobLifetime(this.getLifetimeMessage(input.getStartdate(), LocalDate.now()));
+        input.setJobLifetime(this.getLifetimeMessage(input.getStartDate(), LocalDate.now()));
         input.setAge(this.getAgeMessage(input.getBirthdate(),LocalDate.now()));
         return input;
 
